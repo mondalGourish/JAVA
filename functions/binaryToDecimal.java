@@ -22,7 +22,7 @@ public class binaryToDecimal {
         Scanner sc = new Scanner(System.in);
          System.out.print("Enter the number:");
          int n = sc.nextInt();
-        decimal(101);
+        decimal(n);
     }
     
 }
