@@ -53,6 +53,7 @@ public class freqOfElements {
         System.out.println();
         System.out.println("\nFrequency of elements:");
         frequency(numbers, n);
+        
        
     }
     

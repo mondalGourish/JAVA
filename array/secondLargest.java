@@ -32,6 +32,7 @@ public class secondLargest {
         System.out.println();
         int result = largestSecond(numbers);
         System.out.println("The second largest number is "+result);
+        
     }
     
 }

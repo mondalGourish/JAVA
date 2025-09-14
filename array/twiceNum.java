@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
 public class twiceNum {
-    public static int twice(int n[]){
+    public static boolean twice(int n[]){
+        for(int i=0; i<n.length; i++){
+            for(int j=i+1; j<n.length; j++){
+                if(n[i]==n[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
         
     }
     public static void main(String args[]){
@@ -17,8 +25,12 @@ public class twiceNum {
             System.out.print(numbers[i]+ " ");
         }
         System.out.println();
-        System.out.println("\nFrequency of elements:");
-       
+        if(twice(numbers)){
+            System.out.println("Array contains duplicate elements");
+        }
+        else{
+            System.out.println("Array does not contain duplicate elements");
+        }       
     }
     
 }
