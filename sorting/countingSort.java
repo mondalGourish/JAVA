@@ -1,16 +1,27 @@
-import java.util.*;
-public class bubbleSort {
+import java.util.Scanner;
+
+public class countingSort {
     public static void sort(int nums[]){
         int n = nums.length;
-        for(int i=0; i<n-1; i++){
-            for(int j=0; j<n-i-1; j++){
-                if(nums[j]>nums[j+1]){//for ascending order sort
-                    int temp = nums[j+1];       //nums[j]<nums[j+1] for descending order sort
-                    nums[j+1] = nums[j];
-                    nums[j] = temp;
-                }
+        int max = Integer.MIN_VALUE;
+        for(int i=0; i<n; i++){
+            if(max < nums[i]){
+                max = nums[i];
             }
         }
+        int count[] = new int[max+1];
+        for(int i=0 ; i<n; i++){
+            count[nums[i]]++;
+        }
+        int idx = 0;
+        for(int i=0; i<count.length; i++){
+            while(count[i]>0){
+                nums[idx] = i;
+                idx++;
+                count[i]--;        
+            }
+        }
+
     }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);

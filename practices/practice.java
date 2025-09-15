@@ -27,8 +27,6 @@ class Practice {
             System.out.print(numbers[i]+ " ");
         }
         System.out.println();
-        Solution sol = new Solution();
-        sol.moveZeroes(numbers);
         System.out.print("\nAfter Moving Zeroes: ");
         for (int i = 0; i < n; i++) {
             System.out.print(numbers[i] + " ");

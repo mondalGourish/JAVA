@@ -1,15 +1,18 @@
-import java.util.*;
-public class bubbleSort {
+import java.util.Scanner;
+public class selctionSort {
     public static void sort(int nums[]){
         int n = nums.length;
         for(int i=0; i<n-1; i++){
-            for(int j=0; j<n-i-1; j++){
-                if(nums[j]>nums[j+1]){//for ascending order sort
-                    int temp = nums[j+1];       //nums[j]<nums[j+1] for descending order sort
-                    nums[j+1] = nums[j];
-                    nums[j] = temp;
+            int max = i;
+            for(int j=i+1; j<n; j++){
+                if(nums[max]>nums[j]){
+                    max = j;
                 }
+                
             }
+            int temp = nums[max];
+            nums[max] = nums[i];
+            nums[i] = temp;
         }
     }
     public static void main(String args[]){
