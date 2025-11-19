@@ -1,21 +1,19 @@
 import java.util.*;
-public class bubbleSort {
+
+public class selectionSort {
     public static void sort(int arr[]){
         for(int i=0; i<arr.length-1; i++){
-            int swap = 0;
-            for(int j=0; j<arr.length-1-i; j++){
-                if(arr[j]>arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    swap++;
+            int minPos = i;
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[minPos]>arr[j]){
+                    minPos = j;
                 }
             }
-           
-            if(swap == 0){
-                break;
-            }
+            int temp = arr[minPos];
+            arr[minPos] = arr[i];
+            arr[i] = temp;
         }
+        
         
     }
     public static void input(int arr[],int n){
@@ -49,5 +47,4 @@ public class bubbleSort {
         output(arr,n);
         
     }
-    
 }
