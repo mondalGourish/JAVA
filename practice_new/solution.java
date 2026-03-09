@@ -139,3 +139,98 @@
 //     isArmstrong(n);
 //   }
 // }
+
+//perfect number
+// import java.util.Scanner;
+// public class solution{
+//   public static void isPerfect(int n){
+//     int sum = 0;
+//     for(int i=1; i<n; i++){
+//       if(n%i == 0){
+//         sum += i;
+//       }
+//     }
+//     if(sum == n){
+//       System.out.print("True");
+//     }else{
+//       System.out.print("False");
+//     }
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     isPerfect(n);
+//   }
+// }
+
+//even or odd
+// import java.util.Scanner;
+// public class solution{
+//   public static void evenOdd(int n){
+//     if(n%2 == 0){
+//       System.out.print("Even");
+//     }else{
+//       System.out.print("Odd");
+//     }
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n =sc.nextInt();
+//     evenOdd(n);
+//   }
+// }
+
+//positive or negative
+// import java.util.Scanner;
+// public class solution{
+//   public static void positiveNegative(int n){
+//     if(n>= 0){
+//       System.out.print("positive");
+//     }else{
+//       System.out.print("negative");
+//     }
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n =sc.nextInt();
+//     positiveNegative(n);
+//   }
+// }
+
+//sum upto n natural nos
+// import java.util.Scanner;
+// public class solution{
+//   public static void sumN(int n){
+//     int sum = 0;
+//     for(int i=1; i<=n; i++){
+//       sum += i;
+//     }
+//     System.out.print(sum);
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n =sc.nextInt();
+//     sumN(n);
+//   }
+// }
+
+//find ap
+// import java.util.Scanner;
+// public class solution{
+//   public static void apSeries(int n, int a, int d){
+//     int sum = 0;
+//     for(int i=a; i<=n*d; i=i+d){
+//       sum += i;
+//       System.out.print(i+" ");
+//     }
+//     System.out.println();
+//     System.out.print(sum);
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n =sc.nextInt();
+//     int a = sc.nextInt();
+//     int d = sc.nextInt();
+//     apSeries(n,a,d);
+//   }
+// }
