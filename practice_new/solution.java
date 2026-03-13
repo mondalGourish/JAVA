@@ -426,3 +426,354 @@
 //     factors(n);
 //   }
 // }
+
+//prime factor of a number
+// import java.util.*;
+// public class solution{
+//   public static boolean isPrime(int n){
+//       if(n<=1) return false;
+//       for(int i=2; i*i<=n; i++){
+//         if(n%i == 0){
+//           return false;
+//         }
+//       }
+//       return true;
+//     }
+//     public static List<Integer> isPrimeFactor(int n){
+//       List<Integer> primeFactor = new ArrayList<>();
+//       for(int i=1; i<=n; i++){
+//         if(n%i == 0 && isPrime(i)){
+//           primeFactor.add(i);
+//         }
+//       }
+//       return primeFactor;
+
+//     }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+    
+//     List<Integer> ans = isPrimeFactor(n);
+//     System.out.print("The factors for "+n+" are:");
+//     for(int factor : ans){
+//       System.out.print(factor+" ");
+//     }
+//   }
+// }
+
+//strong number
+// import java.util.*;
+// public class solution{
+//   public static void isStrong(int n){
+//     int sum = 0;
+//     int num = n;
+    
+//     while (n != 0){
+//       int digit = n%10;
+//       int fact = 1;
+//       for(int i=1; i<=digit; i++){
+//         fact *= i;
+//       }
+//       sum = sum+fact;
+//       n = n/10;
+//     }
+//     if(num == sum){
+//       System.out.print("It is a strong number");
+//     }else{
+//       System.out.print("Not");
+//     }
+    
+//   }
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     isStrong(n);
+//   }
+// }
+
+//automorphic number
+// import java.util.*;
+// public class solution{
+//   public static boolean isAutomorphic(int n){
+//     int num = n;
+//     int square = n*n;
+//     while(n != 0){
+//       int digit = n%10;
+//       int digSquare = square%10;
+//       if(digit == digSquare){
+//         return true;
+//       }
+//       n /= 10;
+//       square /= 10;
+//     }
+//     return false;
+    
+//   }
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     if(isAutomorphic(n)){
+//       System.out.print("Automorphic");
+//     }else{
+//       System.out.print("Not");
+//     }
+//   }
+// }
+
+//gcd
+// import java.util.*;
+// public class solution{
+//   public static void gcd(int n,int m){
+//     while(n>0 && m>0){
+//       if(n>m){
+//         n = n%m;
+//       }else{
+//         m = m%n;
+//       }
+//     }
+//     if(n == 0){
+//       System.out.print(m);
+//     }else{
+//       System.out.print(n);
+//     }
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     int m = sc.nextInt();
+//     gcd(n,m);
+    
+//   }
+// }
+
+//lcm
+// import java.util.*;
+// public class solution{
+//   public static int gcd(int n,int m){
+//     while(n>0 && m>0){
+//       if(n>m){
+//         n = n%m;
+//       }else{
+//         m = m%n;
+//       }
+//     }
+//     if(n == 0){
+//       return m;
+//     }else{
+//       return n;
+//     }
+//   }
+//   public static void lcm(int n, int m){
+//     int mul = n*m;
+//     int lcm = mul/gcd(n,m);
+//     System.out.print(lcm);
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     int m = sc.nextInt();
+//     lcm(n,m);
+    
+//   }
+// }
+
+//harshad number
+// import java.util.*;
+// public class solution{
+//   public static void harshadNumber(int n){
+//     int num = n;
+//     int sum = 0;
+//     while(n != 0){
+//       int digit = n%10;
+//       sum = sum +digit;
+//       n/=10;
+//     }
+//     if(num%sum == 0){
+//       System.out.print("It is harshad Number");
+//     }else{
+//       System.out.print("Not");
+//     }
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     harshadNumber(n);
+    
+    
+//   }
+// }
+
+//abundant number
+// import java.util.*;
+// public class solution{
+//   public static void abundantNumber(int n){
+//     int sum = 0;
+//     for(int i=1; i<n; i++){
+//       if(n%i == 0){
+//         sum += i;
+//       }
+//     }
+//     if(sum > n){
+//       System.out.print("Abundant Number");
+//     }else{
+//       System.out.print("Not");
+//     }
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     abundantNumber(n);
+    
+    
+//   }
+// }
+
+//sum of digits of a number until single digit
+// import java.util.*;
+// public class solution{
+//   public static int sumDigitsOfNumUntilSingleDigit(int n){
+    
+//     while(n >= 10){
+//       int sum = 0;
+//         while(n != 0){
+//           int digit = n%10;
+//           sum += digit;
+//           n /= 10;
+//         }
+//         n = sum;
+      
+//     }
+//     return n;
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     System.out.print(sumDigitsOfNumUntilSingleDigit(n));
+    
+    
+//   }
+// }
+
+//sum of number in range
+// import java.util.*;
+// public class solution{
+//  public static void sumOfNumInRange(int min, int max){
+//    int sum = 0;
+//    for(int i=min; i<=max; i++){
+//      sum += i;
+//    }
+//    System.out.print(sum);
+//  }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int min = sc.nextInt();
+//     int max = sc.nextInt();
+//     sumOfNumInRange(min,max);
+
+    
+//   }
+// }
+
+//Permutations in which N people can occupy R seats in a classroom
+// import java.util.*;
+// public class solution{
+//  public static void occupySeats(int n, int r){
+//    int fact1 = 1;
+//    int fact2 = 1;
+//    for(int i=1; i<=n; i++){
+//      fact1 *= i;
+//    }
+//    for(int j=1; j<=n-r; j++){
+//      fact2 *= j;
+//    }
+//    int seats = fact1/fact2;
+//    System.out.print(seats);
+//  }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     int r = sc.nextInt();
+//     occupySeats(n,r);
+
+    
+//   }
+// }
+
+//add two fractions
+// import java.util.*;
+// public class solution{
+ 
+//   public static int gcd(int deno1 , int deno2){
+//     while(deno1>0 && deno2>0){
+//       if(deno1 > deno2){
+//         deno1 = deno1%deno2;
+//       }else{
+//         deno2 = deno2%deno1;
+//       }
+//     }
+//     if(deno1 == 0){
+//       return deno2;
+//     }else{
+//       return deno1;
+//     }
+//   }
+//   public static int lcm(int deno1, int deno2){
+//     int mul = deno1*deno2;
+//     int lcm = mul/gcd(deno1, deno2);
+//     return lcm;
+//   }
+//   public static void sum(int nume1, int deno1, int nume2, int deno2){
+//     int firstNume = 0;
+//     int n1 = 0;
+//     if(lcm(deno1,deno2) == nume1){
+//       firstNume = nume1;
+//     }else{
+//       n1 = lcm(deno1,deno2)/deno1;
+//       firstNume = nume1*n1;
+//     }
+//     int secNume = 0;
+//     int n2 = 0;
+//     if(lcm(deno1,deno2) == nume2){
+//       secNume = nume2;
+//     }else{
+//       n2 = lcm(deno1,deno2)/deno2;
+//       secNume = nume2*n2;
+//     }
+//     int totalNume = firstNume+secNume;
+//     int totalDeno = lcm(deno1,deno2);
+    
+//     int g = gcd(totalNume,totalDeno);
+//     totalNume = totalNume/g;
+//     totalDeno = totalDeno/g;
+    
+//     System.out.print("Numerator="+totalNume+" Denominator="+totalDeno);
+//   }
+
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int nume1 = sc.nextInt();
+//     int deno1 = sc.nextInt();
+//     int nume2 = sc.nextInt();
+//     int deno2 = sc.nextInt();
+//     sum(nume1, deno1, nume2, deno2);
+
+    
+//   }
+// }
