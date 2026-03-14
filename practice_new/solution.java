@@ -777,3 +777,74 @@
     
 //   }
 // }
+
+//replace zero by one in a number
+// import java.util.Scanner;
+// public class solution{
+//   public static void replaceZeroByOne(int n){
+//     int reverse = 0;
+//     int result = 0;
+//     while(n!=0){
+//       int digit = n%10;
+//       if(digit == 0){
+//         digit = 1;
+//       }
+//       reverse = reverse*10+digit;
+//       n /= 10;
+//     }
+//     while(reverse != 0){
+//       int dig = reverse%10;
+//       result = result*10 + dig;
+//       reverse /= 10;
+//     }
+//     System.out.print(result);
+//   }
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     replaceZeroByOne(n);
+//   }
+// }
+
+//express the given number as sum of two prime
+// import java.util.Scanner;
+// public class solution{
+//   public static boolean  isPrime(int n){
+//     if(n<=1) return false;
+//     for(int i=2; i*i<=n; i++){
+//       if(n%i == 0){
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+//   public static void primePairs(int n){
+//     for(int i=2; i<=n/2; i++){
+//       if(isPrime(i) && isPrime(n-i)){
+//         System.out.println(i+" + "+(n-i));
+//       }
+//     }
+//   }
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     int n = sc.nextInt();
+//     primePairs(n);
+//   }
+// }
+
+//area of circle
+// import java.util.Scanner;
+// public class solution{
+//   public static void circleArea(float n){
+//     double pi = 3.14;
+//     double area = pi*n*n;
+//     System.out.print(area);
+//   }
+  
+//   public static void main(String args[]){
+//     Scanner sc = new Scanner(System.in);
+//     float n = sc.nextFloat();
+//     circleArea(n);
+//   }
+// }
